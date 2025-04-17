@@ -4,8 +4,8 @@
   <div class="nav-text-links">
     <router-link to="/" aria-label="Home">Home</router-link>
     <router-link :to="{ path: '/', hash: '#experience-section' }" aria-label="Experience">Experience</router-link>
-    <router-link to="/about" aria-label="Community">Community</router-link>
-    <router-link to="/about" aria-label="About Me">About Me</router-link>
+<!--    <router-link to="/about" aria-label="Community">Community</router-link>
+    <router-link to="/about" aria-label="About Me">About Me</router-link>-->
   </div>
 
   <div class="social icons">

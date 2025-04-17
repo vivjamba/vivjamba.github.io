@@ -208,8 +208,9 @@ const cards = [
 }
 
 .tags span {
-  background: #1452e3;
+  background: #1d3a5c;
   color: white;
+  font-weight: bold;
   padding: 0.3rem 0.75rem;
   font-size: 0.85rem;
   border-radius: 999px;

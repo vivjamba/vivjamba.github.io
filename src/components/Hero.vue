@@ -312,4 +312,44 @@ const scrollToSection = () => {
 }
 
 
+
+@media (max-width: 768px) {
+  .content {
+    padding-left: .5rem;
+    text-align: center;
+  }
+
+  .intro-line {
+    font-size: 2rem;
+    white-space: normal;
+  }
+
+  .typed-line {
+    font-size: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-text-links a {
+    font-size: 0rem;
+  } 
+
+  .social {
+    top: 4rem;
+    right: 50%;
+    transform: translateX(50%);
+    gap: 1rem;
+  }
+
+  .icons a {
+    font-size: 2rem;
+  }
+
+
+  .arrow {
+    font-size: 2rem;
+  }
+}
+
 </style>

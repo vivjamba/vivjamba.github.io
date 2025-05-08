@@ -1,12 +1,7 @@
 <template>
   <div class="hero">
 
-  <div class="nav-text-links">
-    <router-link to="/" aria-label="Home">Home</router-link>
-    <router-link :to="{ path: '/', hash: '#experience-section' }" aria-label="Experience">Experience</router-link>
-<!--    <router-link to="/about" aria-label="Community">Community</router-link>
-    <router-link to="/about" aria-label="About Me">About Me</router-link>-->
-  </div>
+  <Navbar :textLight="true"/>
 
   <div class="social icons">
   <a
@@ -45,6 +40,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import Navbar from '../components/Navbar.vue'
 
 const vivienRef = ref(null)
 const beliefRef = ref(null)
@@ -146,7 +142,7 @@ const scrollToSection = () => {
   content: '';
   position: absolute;
   inset: -100%;
-  background: conic-gradient(from 0deg at top left, #5da4fc, #1452e3, #13218a);
+  background: conic-gradient(from 0deg at top left,rgb(26, 105, 202), #13218a);
   animation: spin-gradient 20s linear infinite;
   z-index: -2;
 }
@@ -158,14 +154,15 @@ const scrollToSection = () => {
   pointer-events: none;
   z-index: -1;
   background:
-    radial-gradient(circle, rgba(255, 255, 255, 0.07) 0%, transparent 80%) 20% 30% / 300px 300px,
-    radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 80%) 70% 40% / 400px 400px,
-    radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 80%) 40% 70% / 500px 500px,
-    radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, transparent 80%) 60% 85% / 350px 350px;
+    radial-gradient(circle, rgba(171, 223, 255, 0.03) 0%, transparent 80%) 20% 30% / 400px 100px,
+    radial-gradient(circle, rgba(171, 223, 255, 0.03) 0%, transparent 40%) 70% 40% / 200px 100px,
+    radial-gradient(circle, rgba(171, 223, 255, 0.01) 0%, transparent 80%) 60% 25% / 1000px 20px,
+    radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 80%) 40% 70% / 1000px 1000px,
+    radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 40%) 40% 70% / 600px 100px;
   background-repeat: repeat;
   animation:
-    cloud-drift 20s linear infinite,
-    cloud-pulse 4s ease-in-out infinite alternate;
+    cloud-drift 50s linear infinite,
+    cloud-pulse 5s ease-in-out infinite alternate;
 }
 
 @keyframes spin-gradient {
@@ -174,18 +171,20 @@ const scrollToSection = () => {
 }
 
 @keyframes cloud-drift {
-  0% { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%; }
-  100% { background-position: 100% 100%, 100% 100%, 100% 100%, 100% 100%; }
+  0% { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%; }  
+  50% { background-position: 100% 100%, 100% 100%, 100% 100%, 100% 100%; }
+  100% { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%; }  
 }
 
 @keyframes cloud-pulse {
   0%, 100% {
-    background-size: 300px 300px, 400px 400px, 500px 500px, 350px 350px;
+    background-size: 20.8% 20.8%, 27.8% 27.8%, 34.7% 34.7%, 24.3% 24.3%;
   }
   50% {
-    background-size: 330px 330px, 440px 440px, 540px 540px, 385px 385px;
+    background-size: 22.9% 22.9%, 30.6% 30.6%, 37.5% 37.5%, 26.7% 26.7%;
   }
 }
+
 
 .content {
   width: 100%;
